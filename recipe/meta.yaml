@@ -1,5 +1,5 @@
 {% set name = "wagtail-storages" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/wagtail-storages-{{ version }}.tar.gz
-  sha256: cffbb1314131c6898ad4ec583c34db5845e2654bae0fa8b7d3b9e6529f023132
+  sha256: 3096eceacf64506453fed6bd42cd02c7ab934477ffcbc4632513f30b9f3c93d0
 
 build:
   noarch: python
