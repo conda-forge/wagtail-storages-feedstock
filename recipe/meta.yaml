@@ -1,13 +1,13 @@
 {% set name = "wagtail-storages" %}
-{% set version = "1.1.0" %}
+{% set version = "2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/wagtail-storages-{{ version }}.tar.gz
-  sha256: 3096eceacf64506453fed6bd42cd02c7ab934477ffcbc4632513f30b9f3c93d0
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: ba3da585d4ffeb8acd828adbed905cbe3db1e799d41318afbd953a472afd1b38
 
 build:
   noarch: python
@@ -19,8 +19,9 @@ requirements:
     - python >=3.8
     - pip
   run:
+    - django >=4.2
     - python >=3.8
-    - wagtail >=4.1
+    - wagtail >=5.2
     - django-storages <2
 
 test:
