@@ -1,5 +1,6 @@
 {% set name = "wagtail-storages" %}
 {% set version = "2.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -18,6 +19,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
+    - setuptools
   run:
     - django >=4.2
     - python >={{ python_min }}
